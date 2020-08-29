@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Calculator App</title>
+    <style>
+        body{
+            background-color:aliceblue;
+            margin:50px auto
+        }
+        h3{
+            text-align:center;
+            font-weight:bold;
+            color:blue
+        }
+        form{
+            margin-top:30px
+        }
+        label{
+            font-size:20px
+        }
+        input{
+            width:100%;
+            color:blue;
+            font-size:15px;
+        }
+        input[type="submit"]{
+            background-color: white;
+            color: blue;
+            font-weight: 800;
+            font-size: 13px;
+            border-color:blue
+        }
+        select{
+            width:20%;
+            font-size:15px
+        }
+        .alert{
+            background-color:blue;
+            display:block;
+            position: relative;
+            text-align:center;
+            margin:20px auto;
+            color:white;
+            font-size:20px;
+            width:50%;
+            height: 35px;
+            line-height: 35px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h3>Welcome to our app</h3>
+    </div>
+    <div class="container">
+        <form action="/send" method="POST">
+            <label for="first number">First Number</label>
+            <input type="text" placeholder="Enter your first number" name="first">
+
+            <label for="second number">Second Number </label>
+            <input type="text" placeholder="Enter your second number" name="second">
+
+            <label for="operation">operations</label>
+            <select name="operation">
+                <option value="add">Add</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+            </select>
+
+            <input type="submit" value="calculate">
+
+            <div class="alert">
+                {{sum}}
+            </div>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
